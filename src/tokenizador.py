@@ -16,8 +16,5 @@ def tokenizar_expressao(expressao):
     
     expressao_limpa = "".join(expressao.split())
     tokens_unidos = "".join(tokens)
-    
-    if len(expressao_limpa) != len(tokens_unidos):
-        raise ValueError("A expressão contém caracteres inválidos.")
         
-    return tokens
+    return tokens, expressao_limpa, tokens_unidos

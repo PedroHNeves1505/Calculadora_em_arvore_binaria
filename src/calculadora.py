@@ -1,4 +1,4 @@
-import re
+from tokenizador import tokenizar_expressao
 
 def obter_expressao():
     print('Digite a expressão a ser resolvida')
@@ -6,7 +6,3 @@ def obter_expressao():
     
     tokens = tokenizar_expressao(expressao)
     print(tokens)
-
-def tokenizar_expressao(expressao):
-    tokens = re.findall(r'\d+|\S', expressao)
-    return tokens  

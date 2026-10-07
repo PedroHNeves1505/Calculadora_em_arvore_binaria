@@ -8,7 +8,7 @@ def obter_expressao_e_tokens():
         print('Digite a expressão a ser resolvida')
         expressao = input('--> ')
         
-        if expressao or expressao.strip():
+        if expressao and expressao.strip():
             pass
         else:
             print('A expressão está vazia!')

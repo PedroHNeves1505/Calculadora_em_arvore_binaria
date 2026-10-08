@@ -85,7 +85,26 @@ O sistema devolverá os tokens, a notação pós-fixa, os percursos da árvore e
 
 ---
 
+## Perguntas Respondidas
+
+1. Por que a expressão precisa ser tokenizada?<br>
+R: A expressão precisa de ser tokenizada para transformar a string de texto bruto numa lista de unidades significativas e isoladas (como números com vários dígitos, decimais e operadores), facilitando o tratamento e o processamento lógico subsequente.
+
+2. Por que uma pilha é adequada para operadores e parênteses?<br>
+R: Uma pilha é adequada porque o seu comportamento LIFO (último a entrar, primeiro a sair) lida de forma natural com a gestão de precedência dos operadores e o comportamento aninhado dos parênteses.
+
+3. Por que o primeiro pop na construção da árvore corresponde ao filho direito?<br>
+R: Porque, na notação pós-fixa, os operandos aparecem por ordem de avaliação inversa, fazendo com que o elemento retirado primeiro do topo da pilha corresponda estruturalmente ao operando localizado à direita do operador.
+
+4. Qual a relação entre pós-ordem e notação pós-fixa?<br>
+R: O percurso em pós-ordem (esquerda, direita, raiz) numa árvore de expressão gera exatamente a sequência da notação pós-fixa (ou polaca inversa) da expressão matemática correspondente.
+
+5. Para uma árvore com n nós, qual a complexidade de tempo para calcular toda a expressão? Justifique.<br>
+R: A complexidade de tempo é linear, ou seja, O(n), pois a avaliação recursiva visita cada um dos $n$ nós da árvore exatamente uma vez para computar o resultado.
+
+---
+
 ## Integrante
 
-Nome: Pedro Henrique Neves
+Nome: Pedro Henrique Neves<br>
 RM: 571382

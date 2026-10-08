@@ -1,9 +1,18 @@
-from tokenizador import tokenizar_expressao
+from .tokenizador import tokenizar_expressao
 import time
 import os
 import subprocess
 
 def obter_expressao_e_tokens():
+    """
+        Obtem a expressão do usuário, verifica se possui uma expressão digitada e se não possui caracteres indefinidos e realiza a tokenização da expressão
+        
+        INPUT:
+            - Expressão
+        
+        OUTPUT:
+            - Expressão e tokens
+    """
     while True:
         print('Digite a expressão a ser resolvida')
         expressao = input('--> ')
@@ -24,7 +33,20 @@ def obter_expressao_e_tokens():
                 subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)
         else:
             return expressao, tokens
+
+def testar_expressao(expressao):
+    """
+        Realiza os testes de funções pré-definidas
         
+        INPUT:
+            - Expressão
+            
+        OUTPUT:
+            - Expressão e tokens
+    """
+    tokens = tokenizar_expressao(expressao)
+    return expressao, tokens
+    
 def pre_ordem(no):
     """
         Retorna uma lista com o percurso em pré-ordem (Raiz, Esquerda, Direita).

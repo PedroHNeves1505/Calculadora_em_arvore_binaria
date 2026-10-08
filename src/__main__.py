@@ -1,6 +1,6 @@
-from calculadora import obter_expressao_e_tokens, gerar_expressao, calcular, pre_ordem, em_ordem, pos_ordem
-from conversor import conversor_posfixa
-from arvore import construir_arvore
+from .calculadora import obter_expressao_e_tokens, gerar_expressao, calcular, pre_ordem, em_ordem, pos_ordem
+from .conversor import conversor_posfixa
+from .arvore import construir_arvore
 import time
 import os
 import subprocess

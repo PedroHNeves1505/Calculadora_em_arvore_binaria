@@ -1,4 +1,4 @@
-from no import No
+from .no import No
 
 def construir_arvore(posfixa):
     """

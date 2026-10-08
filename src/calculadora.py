@@ -24,6 +24,20 @@ def obter_expressao_e_tokens():
                 subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)
         else:
             return expressao, tokens
+        
+def pre_ordem(no):
+    """
+        Retorna uma lista com o percurso em pré-ordem (Raiz, Esquerda, Direita).
+    
+    INPUT:
+        - No
+    
+    OUTPUT:
+        - Lista com expressão pré-ordem
+    """
+    if no is None:
+        return []
+    return [no.valor] + pre_ordem(no.esquerda) + pre_ordem(no.direita)
 
 def em_ordem(no):
     """
@@ -38,6 +52,20 @@ def em_ordem(no):
     if no is None:
         return []
     return em_ordem(no.esquerda) + [no.valor] + em_ordem(no.direita)
+
+def pos_ordem(no):
+    """
+        Retorna uma lista com o percurso em pós-ordem (Esquerda, Direita, Raiz).
+        
+    INPUT:
+        - No
+    
+    OUTPUT:
+        - Lista com expressão pós-ordem    
+    """
+    if no is None:
+        return []
+    return pos_ordem(no.esquerda) + pos_ordem(no.direita) + [no.valor]
 
 def gerar_expressao(no):
     """

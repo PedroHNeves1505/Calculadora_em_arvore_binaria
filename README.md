@@ -102,6 +102,9 @@ R: O percurso em pós-ordem (esquerda, direita, raiz) numa árvore de expressão
 5. Para uma árvore com n nós, qual a complexidade de tempo para calcular toda a expressão? Justifique.<br>
 R: A complexidade de tempo é linear, ou seja, O(n), pois a avaliação recursiva visita cada um dos $n$ nós da árvore exatamente uma vez para computar o resultado.
 
+6. O que determina a quantidade máxima de chamadas recursivas simultâneas?<br>
+R: A quantidade máxima de chamadas recursivas simultâneas é determinada pela altura (ou profundidade máxima) da árvore, pois a pilha de execução do sistema armazena uma chamada por cada nível percorrido até ao nó mais profundo, sendo também condicionada pelo limite de recursão imposto pelo ambiente de execução.
+
 ---
 
 ## Integrante
